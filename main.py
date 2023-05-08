@@ -1,6 +1,6 @@
 from pymystem3 import Mystem
 
-text = "Красивая мама красиво мыла раму"
-m = Mystem()
-lemmas = m.lemmatize(text)
-print(''.join(lemmas))
+with open('text.txt', 'r') as file:
+    text = file.read()
+
+print(text)
