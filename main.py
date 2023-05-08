@@ -31,4 +31,6 @@ for token in analysis:
                     counts[checked_part] += 1
                 break
 
-print(counts)
+label_to_russian = {'A': 'Прилагательных', 'ADV': 'Наречий', 'V': 'Глаголов'}
+for part, count in counts.items():
+    print(f'{label_to_russian[part]}: {count}')
