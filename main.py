@@ -1,6 +1,6 @@
-def print_hi(name):
-    print(f'Hello, {name}')
+from pymystem3 import Mystem
 
-
-if __name__ == '__main__':
-    print_hi('world')
+text = "Красивая мама красиво мыла раму"
+m = Mystem()
+lemmas = m.lemmatize(text)
+print(''.join(lemmas))
