@@ -11,8 +11,10 @@ jobs:
     steps:
       - name: clone repository to VM
         uses: actions/checkout@v3
+        
       - name: install libraries
         run: pip install pymystem3
+        
       - name: run programm
         run: python main.py
         
@@ -24,8 +26,10 @@ jobs:
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
+          
       - name: install libraries
         run: pip install pymystem3
+        
       - name: SonarCloud Scan
         uses: SonarSource/sonarcloud-github-action@master
         env:
