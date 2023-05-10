@@ -35,3 +35,11 @@ jobs:
         env:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
+          
+  coveralls:
+    runs-on: ubuntu-latest
+    needs: [testing]
+    steps:
+      - name: Coveralls analysis
+        uses: coverallsapp/github-action@v1
+
