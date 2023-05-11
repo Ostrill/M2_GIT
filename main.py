@@ -10,8 +10,8 @@ def extract_and_check_part(gr, required_parts):
         return None
 
 
-def open_text_file():
-    with open('text.txt', 'r') as file:
+def open_text_file(path):
+    with open(path, 'r') as file:
         text = file.read()
     return text
 
@@ -47,7 +47,7 @@ def print_result(result):
 
 
 if __name__ == '__main__':
-    text_from_file = open_text_file()
+    text_from_file = open_text_file('text.txt')
     text_analysis = analyze(text_from_file)
     part_counts = count_parts(text_analysis)
     print_result(part_counts)
